@@ -10,7 +10,31 @@ const validateForms = () => {
         item.addEventListener('input', () => {
             item.value = item.value.match(/[А-Яа-я\s]*$/)
         });    
-    });   
+    });  
+    
+    const personalDataCheckbox = document.querySelectorAll('.personal-data'),
+    buttonSend = document.querySelectorAll('button[name = "send1"')
+
+
+    // блокируем все кнопки в попапах по умолчанию
+    const block = () => {
+        buttonSend.forEach((item) => {
+            item.toggleAttribute('disabled');
+        });
+    }
+    block();
+
+    personalDataCheckbox.forEach((elem) => {
+        elem.addEventListener('change', (event) => {
+            if (event.target.checked) {
+                !block();
+            };
+        });
+        
+    })
+    
+
+
 
 };
 
