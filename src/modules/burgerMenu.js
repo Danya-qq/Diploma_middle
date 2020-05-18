@@ -9,10 +9,10 @@ const burgerMenu = () => {
         burgerMenu.previousElementSibling.style = 'display: none'; 
         
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 187) {
-                nav.style.cssText = `position: fixed`;
+            if (window.pageYOffset > 237) {
+                nav.style = `position: fixed`;
             } else {
-                nav.style.cssText = `position: relative`;
+                nav.style = `position: relative`;
             };
         });   
     };
