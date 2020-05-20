@@ -7,9 +7,14 @@ const validateForms = () => {
     });
 
     names.forEach((item) => {
+        
         item.addEventListener('input', () => {
-            item.value = item.value.match(/[А-Яа-я\s]*$/)
-        });    
+            if (item.placeholder === 'Промокод') {
+                item.value = item.value.match(/[А-Яа-я\s\d]*$/)
+            } else 
+                item.value = item.value.match(/[А-Яа-я\s]*$/)
+            
+        });   
     });  
     
     
