@@ -21,11 +21,7 @@ forms.forEach(elem => {
             elem.addEventListener('submit', (event) => {
                 event.preventDefault();
 
-                // console.log(checkbox);
-                // console.log(elem);
-                
                 if (elem.id !== 'footer_form' && !checkbox.checked) {
-                    // alert('Cогласитесь на обработку данных')
                     elem.after(statusMessage);
                     statusMessage.textContent = 'Дайте согласие на обработку данных';       
     
@@ -45,15 +41,7 @@ forms.forEach(elem => {
                 formData.forEach((value, key) => {    
                     body[key] = value;
                 });
-                // console.log(body);
             
-                // очищаем инпуты после отправки
-                //  [...event.target.elements].forEach((item) => {
-                //      if (item.tagName.toLowerCase() === 'input') {
-                //     item.value = '';                
-                //     }
-                // });
-                
                 postData(body)
                     .then((response) => {
                         if (response.status !== 200) {

@@ -2,8 +2,8 @@ const calc = () => {
 
     const calcOrder = document.getElementById('card_order'),
         cardType = calcOrder.querySelectorAll('input[type="radio"]'),
-        priceAction = calcOrder.querySelector('.price-message input'),
-        price = document.getElementById('price-total');
+        priceAction = calcOrder.querySelector('.price-message input');
+        let price = document.getElementById('price-total');
 
         const cost = [0, 3000, 6000, 9000, 12000];
         let value = price.textContent;
@@ -11,27 +11,18 @@ const calc = () => {
         priceAction.addEventListener('input', (e) => {
             let target = e.target;
             
-            if (target.value === 'тело') {
-                console.log(target.value);
-                
-                value = price.textContent * 0.7
-                price.textContent = value;
-
-                
-                
+            if (target.value === 'тело13') {
+                price = document.getElementById('price-total')
+                price.textContent = price.textContent * 0.7;
+                 
                 cardType.forEach((elem, index, arr) => {
                     
                     
                     elem.addEventListener('change', (event) => {
-                        console.log(value);
-                        
-                        // value = price.textContent
-                        
+            
+                        value = document.getElementById('price-total').textContent
                             if (arr[4].checked) {
-                                let value1 = price.textContent;
-                                console.log(value1);
                                 
-                             
                                 if  (event.target.id === 'card_leto_mozaika') {
                                     return price.textContent = (value - 2000) * 0.7;
                                 };
@@ -41,9 +32,7 @@ const calc = () => {
                             };
         
                             if (arr[5].checked) {
-
-                                let value = price.textContent;
-                
+                             
                             if  (event.target.id === 'card_leto_schelkovo') {
                                 return price.textContent = (+value + 2000) * 0.7
                             };
@@ -56,24 +45,14 @@ const calc = () => {
         
             }); 
                 
-            } else {
-                // saleCheck()
-            }
-
-            
-
-           
-            
-
+            };
         });
 
 function saleCheck() {
 
         
     cardType.forEach((elem, index, arr) => {
-        
-        
-
+    
             elem.addEventListener('change', (event) => {
                 console.log(1);
 
@@ -104,10 +83,7 @@ function saleCheck() {
     }); 
 };
 
-saleCheck()
-
-
-
+saleCheck();
 
 };
 

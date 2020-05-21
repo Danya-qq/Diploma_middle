@@ -7,6 +7,9 @@ import sendForm from './modules/sendForm.js';
 import calc from './modules/calc.js';
 import togglePopUp from './modules/togglePopUp.js';
 import validateForms from './modules/validateForms.js';
+import servicesSlider from './modules/servicesSlider.js';
+
+
 
 
 // menu
@@ -30,3 +33,7 @@ calc();
 // validation
 
 validateForms();
+
+//services slider
+
+servicesSlider();
