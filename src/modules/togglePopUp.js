@@ -10,8 +10,7 @@ const togglePopUp = () => {
             if (item.id === 'gift') {
 
                 if (target.matches('.overlay, .close-btn, img')) {
-                    console.log(target);
-                    
+                  
                     item.style = 'display: none'
                 };  
             };

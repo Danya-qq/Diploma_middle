@@ -11,7 +11,7 @@ const calc = () => {
         priceAction.addEventListener('input', (e) => {
             let target = e.target;
             
-            if (target.value === 'тело13') {
+            if (target.value === 'ТЕЛО2019') {
                 price = document.getElementById('price-total')
                 price.textContent = price.textContent * 0.7;
                  
@@ -54,7 +54,6 @@ function saleCheck() {
     cardType.forEach((elem, index, arr) => {
     
             elem.addEventListener('change', (event) => {
-                console.log(1);
 
                     if (arr[4].checked) {
                         let value = price.textContent;

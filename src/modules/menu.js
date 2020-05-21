@@ -40,8 +40,7 @@ const menu = () => {
     topAnchor.style = 'display: none';
 
     window.addEventListener('scroll', () => {
-        // console.log(window.pageYOffset);
-        
+
         if (window.pageYOffset > 700) {
             topAnchor.style = 'display: block';
         } else {
